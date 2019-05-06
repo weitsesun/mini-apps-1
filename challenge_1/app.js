@@ -31,6 +31,22 @@
             ,50);
           }
         }
+
+        var curTable = document.getElementsByClassName('mybutton');
+        var tie = true;
+        var count = 0;
+        while (count < 9) {
+          if(curTable[count].innerText === ""){
+            tie = false;
+          }
+          count++;
+        }
+        if(tie) {
+          setTimeout(()=>{
+            alert('Tie!');
+            reset();
+          }, 100);
+        }
       
       
       
