@@ -34,12 +34,12 @@
 
         var curTable = document.getElementsByClassName('mybutton');
         var tie = true;
-        var count = 0;
-        while (count < 9) {
-          if(curTable[count].innerText === ""){
+        var cou = 0;
+        while (cou < 9) {
+          if(curTable[cou].innerText === ""){
             tie = false;
           }
-          count++;
+          cou++;
         }
         if(tie) {
           setTimeout(()=>{
