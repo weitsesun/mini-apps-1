@@ -5,7 +5,18 @@ button {
   margin: auto;
 }
 
+button:hover {
+  background-color: rgb(165, 164, 164);
+}
+
 #reset {
   font-size: 25px;
   width: 150px;
+
+}
+
+body {
+  margin: auto;
+  /* background-color: rgb(142, 188, 231); */
+  width: 80%;
 }

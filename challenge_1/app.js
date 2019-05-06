@@ -1,10 +1,4 @@
 
-
-console.log("loaded app.js");
-
-console.log(document.getElementsByClassName('mybutton'));
-
-
 (function handleClick() {
   //change e.target.innerText
   
@@ -20,12 +14,25 @@ console.log(document.getElementsByClassName('mybutton'));
           for (var i = 0; i < curTic.length; i++){
             count+=curTic[i].innerText.length;
           }
-          var change = ['x', 'o'];
+          var change = ['X', 'O'];
           this.innerText = change[count%2];
         }
+        
+        for(var i = 0; i<winCases.length; i++) {
+          var win=winCases[i];
+          var val1=document.getElementsByName(win[0])[0].innerText;
+          var val2=document.getElementsByName(win[1])[0].innerText;
+          var val3=document.getElementsByName(win[2])[0].innerText;
+          if(val1 !== "" && val1 === val2 && val2 === val3) {
+            setTimeout(() => {
+              alert('Winner is '+ change[count%2]);
+              reset();
+            }
+            ,50);
+          }
+        }
       
-      //check win cases:
-        //iterator through the table
+      
       
       
       }
