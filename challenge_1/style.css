@@ -4,3 +4,8 @@ button {
   font-size: 35px;
   margin: auto;
 }
+
+#reset {
+  font-size: 25px;
+  width: 150px;
+}
