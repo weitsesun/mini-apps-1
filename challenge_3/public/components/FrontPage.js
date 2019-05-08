@@ -1,0 +1,15 @@
+import InfoHandler from './InfoHandler.js';
+
+class FrontPage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return React.createElement("div", null, React.createElement("h1", null, "Shopping Cart"), React.createElement(InfoHandler, null));
+  }
+
+}
+
+export default FrontPage;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2NsaWVudC9jb21wb25lbnRzL0Zyb250UGFnZS5qc3giXSwibmFtZXMiOlsiSW5mb0hhbmRsZXIiLCJGcm9udFBhZ2UiLCJSZWFjdCIsIkNvbXBvbmVudCIsImNvbnN0cnVjdG9yIiwicHJvcHMiLCJyZW5kZXIiXSwibWFwcGluZ3MiOiJBQUFBLE9BQU9BLFdBQVAsTUFBd0Isa0JBQXhCOztBQUVBLE1BQU1DLFNBQU4sU0FBd0JDLEtBQUssQ0FBQ0MsU0FBOUIsQ0FBd0M7QUFDdENDLEVBQUFBLFdBQVcsQ0FBQ0MsS0FBRCxFQUFRO0FBQ2pCLFVBQU1BLEtBQU47QUFFRDs7QUFFREMsRUFBQUEsTUFBTSxHQUFHO0FBQ1AsV0FDRSxpQ0FDRSxnREFERixFQUVFLG9CQUFDLFdBQUQsT0FGRixDQURGO0FBTUQ7O0FBYnFDOztBQWdCeEMsZUFBZUwsU0FBZiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBJbmZvSGFuZGxlciBmcm9tICcuL0luZm9IYW5kbGVyLmpzJ1xuXG5jbGFzcyBGcm9udFBhZ2UgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICBjb25zdHJ1Y3Rvcihwcm9wcykge1xuICAgIHN1cGVyKHByb3BzKTtcblxuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8aDE+U2hvcHBpbmcgQ2FydDwvaDE+XG4gICAgICAgIDxJbmZvSGFuZGxlci8+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRnJvbnRQYWdlOyJdfQ==
