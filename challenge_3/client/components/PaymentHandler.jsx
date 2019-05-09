@@ -11,7 +11,7 @@ class PaymentHandler extends React.Component {
 
   render() {
     return (
-      <form class="payment">
+      <form class="payment" onSubmit={this.props.nextPage}>
         <fieldset>
           <legend>PaymentHandler</legend>
           <label class="paymentInfo">Name On Card: </label>

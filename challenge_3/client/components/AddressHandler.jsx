@@ -7,7 +7,7 @@ class AddressHandler extends React.Component {
 
   render() {
     return (
-      <form class="addr">
+      <form class="addr" onSubmit={this.props.nextPage}>
         <fieldset>
           <legend>AddressHandler</legend>
           <label class="addrInfo">Address: </label>

@@ -7,7 +7,7 @@ class InfoHandler extends React.Component {
 
   render() {
     return (
-      <form class="info">
+      <form class="info" onSubmit={this.props.nextPage}>
         <fieldset>
           <legend>InfoHandler</legend>
           <label class="personInfo">Name: </label>
