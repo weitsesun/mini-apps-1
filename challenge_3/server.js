@@ -24,17 +24,19 @@ app.get('/', (req, res) => {
 })
 //post req
 app.post('/', (req, res) => {
-  res.status(201).send(req.body);
-  var body = req.body;
-  queryStr = "INSERT INTO customerInfo(name, email, password, addressline, zipcode, city, \
-    country, cardHolder, cardNumber, cvv, expDate) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-  db.query(queryStr, [body.name, body.email, body.password, body.addressline, body.zipcode, body.city,
-  body.country, body.cardHolder, body.cardNumber, body.cvv, body.expDate], (err, result) => {
+  // res.status(201).send(req.body);
+  console.log(req.body);
+
+  // var queryStr = ;
+    
+  db.query("INSERT INTO customerInfo(name, email, password, addressline, zipcode, city, \
+    country, cardHolder, cardNumber, cvv, expDate) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [req.body.name, req.body.email, req.body.password, req.body.addressline, req.body.zipcode, req.body.city,
+  req.body.country, req.body.nameOnCard, req.body.creditCardNum, req.body.cvv, req.body.expDate], (err, result) => {
     if (err) {
       res.status(500).send("error");
       return;
     }
-    res.status(200).send("Posted to Shopping Database!")
+    res.status(200).send("posted to database");
   })
 })
 

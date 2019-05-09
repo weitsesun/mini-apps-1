@@ -29,7 +29,7 @@ class FinalReview extends React.Component {
           <li name="cvv"><span>CVV:</span>{this.props.info.cvv}</li>
           <li name="expDate"><span>Exp Date:</span>{this.props.info.expDate}</li>
         </ul>
-        <input type="submit" name="submit" value="CHECKOUT"></input>
+        <button type="submit" name="submit" value="CHECKOUT" onClick={this.props.sendToData}>Send</button>
       </div>
     )
   }

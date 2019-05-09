@@ -4,6 +4,7 @@ import AddressHandler from './AddressHandler.js';
 import PaymentHandler from './PaymentHandler.js';
 import FinalReview from './FinalReview.js';
 
+
 class FrontPage extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ class FrontPage extends React.Component {
     }
     this.changeInfo = this.changeInfo.bind(this);
     this.changeDisplayedForm = this.changeDisplayedForm.bind(this);
+    this.postToDatabase = this.postToDatabase.bind(this);
   }
 
   changeInfo(e) {
@@ -40,6 +42,19 @@ class FrontPage extends React.Component {
     })
   }
 
+  postToDatabase(e) {
+    e.preventDefault();
+    console.log(this.state);
+    console.log("postTodatabase invoked");
+    axios.post("http://localhost:3000", this.state)
+      .then((res)=>{
+        console.log('Success: ', res);
+      })
+      .catch((err)=>{
+        console.log('Err: ', err);
+      })
+  }
+
   pageRender() {
     switch(this.state.currentlyDisplayedForm) {
       case 0:
@@ -54,7 +69,7 @@ class FrontPage extends React.Component {
         return <PaymentHandler changeInfo={this.changeInfo} nextPage={this.changeDisplayedForm}/>
         break;
       case 4:
-        return <FinalReview info={this.state}/>
+        return <FinalReview info={this.state} sendToData={this.postToDatabase}/>
         break;
       default:
         return <InfoHandler changeInfo={this.changeInfo} nextPage={this.changeDisplayedForm}/>
