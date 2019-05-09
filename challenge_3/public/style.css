@@ -1,0 +1,17 @@
+body{
+  color: white;
+  background-color: rgb(5, 5, 5);
+}
+
+#app {
+  color: black;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  background-color: rgb(28, 99, 99);
+}
+
+span{
+  width: 7rem;
+  display: inline-block;
+}

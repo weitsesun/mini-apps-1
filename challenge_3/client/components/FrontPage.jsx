@@ -1,7 +1,8 @@
-import ProcessCheckout from './ProcessCheckout.js'
-import InfoHandler from './InfoHandler.js'
-import AddressHandler from './AddressHandler.js'
-import PaymentHandler from './PaymentHandler.js'
+import ProcessCheckout from './ProcessCheckout.js';
+import InfoHandler from './InfoHandler.js';
+import AddressHandler from './AddressHandler.js';
+import PaymentHandler from './PaymentHandler.js';
+import FinalReview from './FinalReview.js';
 
 class FrontPage extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class FrontPage extends React.Component {
   changeDisplayedForm(e) {
     e.preventDefault();
     var curForm = this.state.currentlyDisplayedForm;
-    curForm = (curForm + 1) % 4;
+    curForm = (curForm + 1) % 5;
     this.setState({
       currentlyDisplayedForm: curForm
     })
@@ -52,22 +53,19 @@ class FrontPage extends React.Component {
       case 3:
         return <PaymentHandler changeInfo={this.changeInfo} nextPage={this.changeDisplayedForm}/>
         break;
+      case 4:
+        return <FinalReview info={this.state}/>
+        break;
       default:
         return <InfoHandler changeInfo={this.changeInfo} nextPage={this.changeDisplayedForm}/>
     }
   }
 
   render() {
-    
     return (
       <div>
         <h1>Checking out...</h1>
         {this.pageRender()}
-        {/* <InfoHandler changeInfo={this.changeInfo.bind(this)}/>
-        <br/>
-        <AddressHandler changeInfo={this.changeInfo.bind(this)}/>
-        <br/>
-        <PaymentHandler changeInfo={this.changeInfo.bind(this)}/> */}
       </div>
     )
   }

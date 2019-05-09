@@ -15,22 +15,22 @@ class PaymentHandler extends React.Component {
         <fieldset>
           <legend>PaymentHandler</legend>
           <label class="paymentInfo">Name On Card: </label>
-          <input type="text" name="nameOnCard" onChange={this.props.changeInfo} value={this.props.nameOnCard}></input>
+          <input type="text" name="nameOnCard" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="paymentInfo">Credit Card Number: </label>
-          <input type="text" name="creditCardNum" onChange={this.props.changeInfo} value={this.props.creditCardNum}></input>
+          <input type="text" name="creditCardNum" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="paymentInfo">CVV: </label>
-          <input type="text" name="cvv" onChange={this.props.changeInfo} value={this.props.cvv}></input>
+          <input type="text" name="cvv" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="paymentInfo">Exp Date: </label>
-          <input type="text" name="expDate" onChange={this.props.changeInfo} value={this.props.expDate}></input>
+          <input type="text" name="expDate" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
-          <input type="submit" name="submit" value="CHECKOUT"></input>
+          <input type="submit" name="submit" value="NEXT"></input>
         </fieldset>
       </form>
     )

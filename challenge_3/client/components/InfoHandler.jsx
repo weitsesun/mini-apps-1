@@ -11,15 +11,15 @@ class InfoHandler extends React.Component {
         <fieldset>
           <legend>InfoHandler</legend>
           <label class="personInfo">Name: </label>
-          <input type="text" name="name" onChange={this.props.changeInfo} value={this.props.name}></input>
+          <input type="text" name="name" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="personInfo">Email: </label>
-          <input type="text" name="email" onChange={this.props.changeInfo} value={this.props.email}></input>
+          <input type="text" name="email" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="personInfo">Password: </label>
-          <input type="text" name="password" onChange={this.props.changeInfo} value={this.props.password}></input>
+          <input type="password" name="password" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <input type="submit" name="submit" value="NEXT"></input>

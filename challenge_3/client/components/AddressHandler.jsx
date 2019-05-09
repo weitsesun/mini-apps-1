@@ -11,19 +11,19 @@ class AddressHandler extends React.Component {
         <fieldset>
           <legend>AddressHandler</legend>
           <label class="addrInfo">Address: </label>
-          <input type="text" name="addressline" onChange={this.props.changeInfo} value={this.props.addressline}></input>
+          <input type="text" name="addressline" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="addrInfo">City: </label>
-          <input type="text" name="city" onChange={this.props.changeInfo} value={this.props.city}></input>
+          <input type="text" name="city" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="addrInfo">Zipcode: </label>
-          <input type="text" name="zipcode" onChange={this.props.changeInfo} value={this.props.zipcode}></input>
+          <input type="text" name="zipcode" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <label class="addrInfo">Country: </label>
-          <input type="text" name="country" onChange={this.props.changeInfo} value={this.props.country}></input>
+          <input type="text" name="country" onChange={this.props.changeInfo}></input>
           <br/>
           <br/>
           <input type="submit" name="submit" value="NEXT"></input>
