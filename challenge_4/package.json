@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "webpack"
+    "react-dev": "webpack -d --watch"
   },
   "author": "Wayne Sun",
   "license": "ISC",
@@ -15,6 +15,11 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "webpack": "^4.31.0"
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   }
 }
